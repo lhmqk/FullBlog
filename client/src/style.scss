@@ -1,0 +1,88 @@
+$background_bot: #292929;
+$background_top: #121212;
+$title: #bb86fc;
+$text: #e3e3e3;
+$button: #03dac6;
+
+* {
+  margin: 0px;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  .container {
+    width: 1024px;
+
+    //LOGIN & REGISTER
+    .auth {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: $background_bot;
+
+      h1 {
+        text-transform: uppercase;
+        font-size: 24px;
+        color: $title;
+        margin-bottom: 18px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 48px;
+        background-color: $background_top;
+        width: 180px;
+        gap: 16px;
+
+        input {
+          padding: 8px;
+          border: none;
+          border-bottom: solid 1px $title;
+          background: none;
+        }
+
+        button {
+          padding: 8px;
+          border: none;
+          background-color: $title;
+          color: $background_top;
+          cursor: pointer;
+        }
+
+        p {
+          font-size: 12px;
+          color: $button;
+          text-align: center;
+        }
+
+        span {
+          font-size: 12px;
+          text-align: center;
+          color: $text;
+
+          a {
+            color: $button;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    //NAVBAR
+    .navbar {
+      .container {
+        padding: 8px 0px;
+        display: flex;
+        justify-content: space-between;
+        .logo {
+        }
+        .links {
+        }
+      }
+    }
+  }
+}

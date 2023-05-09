@@ -1,2 +1,3 @@
 # FullBlog
-Study Blog App Using ReactJS, Node.js, and MySQL
+
+Study Blog App Using ReactJS, SASS, Node.js, and MySQL

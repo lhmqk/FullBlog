@@ -12,6 +12,7 @@ import Single from "./pages/Single";
 import Write from "./pages/Write";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import "./style.scss";
 
 const Layout = () => {
   return (
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "/single", element: <Single /> },
+      { path: "/post/:id", element: <Single /> },
       { path: "/write", element: <Write /> },
     ],
   },
@@ -46,7 +47,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      <div className="container">
+        <RouterProvider router={router} />
+      </div>
     </div>
   );
 }
