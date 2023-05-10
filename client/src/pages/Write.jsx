@@ -10,7 +10,12 @@ const Write = () => {
       <div className="content">
         <input type="text" placeholder="Title" />
         <div className="editorContainer">
-          <ReactQuill theme="snow" value={value} onChange={setValue} />
+          <ReactQuill
+            className="editor"
+            theme="snow"
+            value={value}
+            onChange={setValue}
+          />
         </div>
       </div>
       <div className="menu">
@@ -23,7 +28,9 @@ const Write = () => {
             <b>Visibility: </b> Public
           </span>
           <input style={{ display: "none" }} type="file" name="" id="file" />
-          <label htmlFor="file">Upload Image</label>
+          <label className="file" htmlFor="file">
+            Upload Image
+          </label>
           <div className="buttons">
             <button>Save as a draft</button>
             <button>Update</button>
@@ -31,12 +38,18 @@ const Write = () => {
         </div>
         <div className="item">
           <h1>Category</h1>
-          <input type="radio" name="cat" value="study" id="study" />
-          <label htmlFor="study">Study</label>
-          <input type="radio" name="cat" value="billiard" id="billiard" />
-          <label htmlFor="billiard">Billiard</label>
-          <input type="radio" name="cat" value="food" id="food" />
-          <label htmlFor="food">Food</label>
+          <div className="cat">
+            <input type="radio" name="cat" value="study" id="study" />
+            <label htmlFor="study">Study</label>
+          </div>
+          <div className="cat">
+            <input type="radio" name="cat" value="billiard" id="billiard" />
+            <label htmlFor="billiard">Billiard</label>
+          </div>
+          <div className="cat">
+            <input type="radio" name="cat" value="food" id="food" />
+            <label htmlFor="food">Food</label>
+          </div>
         </div>
       </div>
     </div>

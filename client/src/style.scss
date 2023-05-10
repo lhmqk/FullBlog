@@ -338,6 +338,17 @@ $button: #03dac6;
           border: 1px solid $title;
           background-color: $background_bot;
         }
+
+        .editorContainer {
+          height: 296px;
+          overflow: scroll;
+          border: solid 1px $title;
+
+          .editor {
+            height: 100%;
+            border: none;
+          }
+        }
       }
 
       .menu {
@@ -345,6 +356,53 @@ $button: #03dac6;
         display: flex;
         flex-direction: column;
         gap: 16px;
+
+        .item {
+          border: solid 1px $title;
+          padding: 8px;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          font-size: 12px;
+
+          h1 {
+            font-size: 20px;
+          }
+
+          .file {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+
+          .buttons {
+            display: flex;
+            justify-content: space-between;
+
+            :first-child {
+              cursor: pointer;
+              color: $title;
+              background-color: $background_bot;
+              border: solid 1px $title;
+              padding: 4px;
+            }
+
+            :last-child {
+              cursor: pointer;
+              color: $background_bot;
+              background-color: $title;
+              border: solid 1px $background_bot;
+              padding: 4px;
+            }
+          }
+
+          .cat {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: $title;
+          }
+        }
       }
     }
   }
